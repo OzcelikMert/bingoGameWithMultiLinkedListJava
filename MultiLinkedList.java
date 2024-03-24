@@ -180,7 +180,7 @@ public class MultiLinkedList {
         while (tempRow != null) {
             int count = 0;
             Node tempCell = tempRow.next;
-            while (tempCell != null) {
+            while (!tempRow.isFilled && tempCell != null) {
                 if (tempCell.data == this.filledCellValue) {
                     count++;
                 }
